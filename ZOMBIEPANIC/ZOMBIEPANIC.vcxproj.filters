@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Sourse">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Sourse\Game">
+      <UniqueIdentifier>{7b554cee-145f-4640-8ce6-2c7ccaf5f67a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sourse\Scene">
+      <UniqueIdentifier>{8a514e88-5071-410f-88c4-6247acc6161b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Game\CField.cpp">
+      <Filter>Sourse\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\CPlayer.cpp">
+      <Filter>Sourse\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\CTitle.cpp">
+      <Filter>Sourse\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\Result.cpp">
+      <Filter>Sourse\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\Anime.cpp">
+      <Filter>Sourse\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\CBullet.cpp">
+      <Filter>Sourse\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\CEnemy.cpp">
+      <Filter>Sourse\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Scene\CGameScene.cpp">
+      <Filter>Sourse\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Scene\CTitleScene.cpp">
+      <Filter>Sourse\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\System\FrameBase\CGameFrame.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="src\System\FrameBase\CSceneBase.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="src\System\FrameBase\Fade.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="src\System\FrameBase\GameObject.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="src\System\FrameBase\wavread.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="src\System\KdLibrary\CCamera.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="src\System\KdLibrary\KdDirect3D.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="src\System\KdLibrary\KdHelper.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="src\System\KdLibrary\KdMath.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="src\System\KdLibrary\KdModel.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="src\System\KdLibrary\KdResourceManager.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="src\System\FrameBase\main.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Scene\CResultScene.cpp">
+      <Filter>Sourse\Scene</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Game\CField.h">
+      <Filter>Sourse\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\CPlayer.h">
+      <Filter>Sourse\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\CTitle.h">
+      <Filter>Sourse\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\Result.h">
+      <Filter>Sourse\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\Anime.h">
+      <Filter>Sourse\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\CBullet.h">
+      <Filter>Sourse\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\CEnemy.h">
+      <Filter>Sourse\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Scene\CGameScene.h">
+      <Filter>Sourse\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Scene\CTitleScene.h">
+      <Filter>Sourse\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\System\FrameBase\CGameFrame.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="src\System\FrameBase\CSceneBase.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="src\System\FrameBase\Fade.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="src\System\FrameBase\GameObject.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="src\System\FrameBase\wavread.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="src\System\KdLibrary\CCamera.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="src\System\KdLibrary\KdDirect3D.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="src\System\KdLibrary\KdHelper.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="src\System\KdLibrary\KdMath.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="src\System\KdLibrary\KdModel.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="src\System\KdLibrary\KdResourceManager.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="src\System\KdLibrary\MyLibrary.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Scene\CResultScene.h">
+      <Filter>Sourse\Scene</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

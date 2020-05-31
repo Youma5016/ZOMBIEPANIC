@@ -1,0 +1,16 @@
+{
+
+  "Tag": "Player",
+
+  "value1": 111,
+
+  "value2": 2.2,
+
+  "value3": true,
+  "value4":{
+    "a": 1,
+    "b": 2
+
+  }
+
+}

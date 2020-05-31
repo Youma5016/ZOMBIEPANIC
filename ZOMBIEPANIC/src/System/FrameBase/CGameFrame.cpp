@@ -130,8 +130,6 @@ void CGameFrame::GameLoop()
 
 	if (nextscene != nowscene)//シーンIDの比較
 	{
-
-
 		if (FADE.GetLoadOKFlg()) {
 
 			SceneClear();

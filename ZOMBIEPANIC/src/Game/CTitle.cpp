@@ -2,10 +2,7 @@
 #include"CTitle.h"
 
 CTitle::CTitle()
-	:mpTexture1(nullptr)
-	,mpTexture2(nullptr)
-	, mMatrix1()
-	, mMatrix2()
+	
 {
 	
 }
@@ -18,8 +15,10 @@ CTitle::~CTitle()
 
 void CTitle::Init()
 {
-	mpTexture1 = RESOURCE_MNG.GetTexture("data/Title.png");
-	mpTexture2 = RESOURCE_MNG.GetTexture("data/PRESSENTER.png");
+	mpTexture1 = RESOURCE_MNG.GetTexture("Title.png");
+	mpTexture2 = RESOURCE_MNG.GetTexture("PRESSENTER.png");
+
+
 	D3DXMatrixTranslation(&mMatrix1, 0.0f, 0.0f, 0.0f);
 	D3DXMatrixTranslation(&mMatrix2, 0.0f, 0.0f, 0.0f);
 	
@@ -33,7 +32,6 @@ void CTitle::Update()
 		if (Alpha <= 150) {
 			Alpha += 3;
 		}
-	
 	D3DXMatrixTranslation(&mMatrix1, 1280 / 2, 720 / 3.0, 0);
 	D3DXMatrixTranslation(&mMatrix2, 1280 / 1.9, 720/1.5, 0);
 }

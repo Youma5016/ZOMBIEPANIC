@@ -33,7 +33,7 @@ private:
 
 
 	shared_ptr<CSceneBase> nowScene;
-	string str;
+	
 	bool              mIsFullScreen;
 	const D3DXVECTOR2       mWindowSize;
 	const string       mAppName;

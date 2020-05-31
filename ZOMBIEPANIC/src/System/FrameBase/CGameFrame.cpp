@@ -1,9 +1,9 @@
 ﻿#include"../KdLibrary/MyLibrary.h"
+#include "CGameFrame.h"
 #include "CSceneBase.h"
 #include"../../Scene/CTitleScene.h"
 #include"../../Scene/CGameScene.h"
 #include"../../Scene/CResultScene.h"
-#include "CGameFrame.h"
 
 LRESULT APIENTRY WndFunc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 {
@@ -160,6 +160,9 @@ void CGameFrame::GameLoop()
 		if (nowScene && nextscene == nowscene) {
 			//シーンの更新
 			nextscene = nowScene->Update();
+		}
+		else if (nextscene != nowscene) {
+			nowScene->Update();
 		}
 
 		FADE.Update();

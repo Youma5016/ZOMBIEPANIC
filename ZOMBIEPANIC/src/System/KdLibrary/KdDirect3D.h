@@ -68,14 +68,17 @@ public:
 	void SetWorldMatrix(const D3DXMATRIX* m) {
 		m_lpD3DDev->SetTransform(D3DTS_WORLD, m);
 	}
-	// 
+	//ライトの設定
+	void CreatePointLight(const D3DXVECTOR3& Pos, const D3DXVECTOR4& Diffuse, const D3DXVECTOR4& Ambient);
+	void CreateDirectionalLight(const D3DXVECTOR3& Dir, const D3DXVECTOR4& Diffuse, const D3DXVECTOR4& Ambient);
+	void DeleteLight();
+	void SetLights();
 	~KdDirect3D() {
 		Release();
 	}
 
 private:
-	D3DLIGHT9					m_Light = {};//<-構造体の中身０クリアに
-
+	std::vector<D3DLIGHT9>					m_Lights;//<-構造体の中身０クリアに
 
 
 	LPDIRECT3D9EX				m_lpD3D = nullptr;				// D3Dオブジェクト

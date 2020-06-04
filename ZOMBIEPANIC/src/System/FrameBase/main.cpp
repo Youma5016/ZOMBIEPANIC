@@ -20,6 +20,12 @@ int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrev,
         return 0;
     }
 
+     // メモリリークを知らせる
+    _CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
+    // COM初期化
+    CoInitializeEx(nullptr, COINIT_MULTITHREADED);
+    
+
     while (1) {
         if (PeekMessage(&msg, NULL, 0, 0, PM_NOREMOVE))
         {
@@ -32,6 +38,7 @@ int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrev,
             FRAME.GameLoop();
         }
     }
-
+    // COM解放
+    CoUninitialize();
     return (int)msg.wParam;
 }

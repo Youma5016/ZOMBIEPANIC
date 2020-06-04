@@ -152,52 +152,53 @@ void CGameFrame::GameLoop()
 				break;
 			}
 		}
-
-		KD3D.GetDev()->Clear(0, nullptr, flags, D3DCOLOR_ARGB(255, 0, 0, 255), 1.0f, 0);
-
-
-		//nowSceneが存在してnextsceneとnowsceneが同じかどうか
-		if (nowScene && nextscene == nowscene) {
-			//シーンの更新
-			nextscene = nowScene->Update();
-		}
-		else if (nextscene != nowscene) {
-			nowScene->Update();
-		}
-
-		FADE.Update();
-
-		// 描画開始
-		KD3D.GetDev()->BeginScene();
-
-
-		CAMERA.Set(mWindowSize);
-
-		if (nowScene) {
-
-
-			//2D描画.
-			SPRITE->Begin(D3DXSPRITE_ALPHABLEND);
-			nowScene->Draw2D();
-			SPRITE->End();
-
-			//3D描画.
-			nowScene->Draw3D();
-
-		}
-		FADE.Draw();
-		RECT rc = { 0,0,0,0 };
-		char buf[100];
-		sprintf_s(buf, sizeof(buf), "%dFPS", FPS);
-		FONT->DrawText(NULL, buf, -1, &rc, DT_LEFT | DT_NOCLIP, D3DCOLOR_ARGB(255, 255, 0, 0));
-
-
-		// 描画終了
-		KD3D.GetDev()->EndScene();
-
-		// バックバッファをプライマリバッファにコピー
-		KD3D.GetDev()->Present(NULL, NULL, NULL, NULL);
 	}
+	KD3D.GetDev()->Clear(0, nullptr, flags, D3DCOLOR_ARGB(255, 0, 0, 255), 1.0f, 0);
+
+
+	//nowSceneが存在してnextsceneとnowsceneが同じかどうか
+	if (nowScene && nextscene == nowscene) {
+		//シーンの更新
+		nextscene = nowScene->Update();
+	}
+	else if (nextscene != nowscene) {
+		nowScene->Update();
+	}
+
+	FADE.Update();
+
+	// 描画開始
+	KD3D.GetDev()->BeginScene();
+
+
+	CAMERA.Set(mWindowSize);
+
+	if (nowScene) {
+
+
+		//3D描画.
+		KD3D.SetLights();
+		nowScene->Draw3D();
+
+		//2D描画.
+		SPRITE->Begin(D3DXSPRITE_ALPHABLEND);
+		nowScene->Draw2D();
+		SPRITE->End();
+
+	}
+	FADE.Draw();
+	RECT rc = { 0,0,0,0 };
+	char buf[100];
+	sprintf_s(buf, sizeof(buf), "%dFPS", FPS);
+	FONT->DrawText(NULL, buf, -1, &rc, DT_LEFT | DT_NOCLIP, D3DCOLOR_ARGB(255, 255, 0, 0));
+
+
+	// 描画終了
+	KD3D.GetDev()->EndScene();
+
+	// バックバッファをプライマリバッファにコピー
+	KD3D.GetDev()->Present(NULL, NULL, NULL, NULL);
+
 }
 
 const bool CGameFrame::CreateWNDCLASS(HINSTANCE aHInst)

@@ -23,10 +23,10 @@ CField::~CField()
 
 void CField::Init()
 {
-	BuildMesh = RESOURCE_MNG.GetModel("data/LowPolyCITY_8.x");
-	SkyMesh = RESOURCE_MNG.GetModel("data/Red_Sky.x");
+	BuildMesh = RESOURCE_MNG.GetModel("ZOMBIEPANIC/Resource/3DModelLowPolyCITY_8.x");
+	SkyMesh = RESOURCE_MNG.GetModel("ZOMBIEPANIC/Resource/3DModel/Red_Sky.x");
 
-	GroundTex = RESOURCE_MNG.GetTexture("data/Ground.png");
+	GroundTex = RESOURCE_MNG.GetTexture("Ground.png");
     //Œš•¨
 	mPos = D3DXVECTOR3(0, 0, 0);
 	D3DXMatrixTranslation(&mMatrix, 0, 0, 0);
@@ -95,5 +95,10 @@ void CField::Draw3D() {
 	v[1].Color = D3DCOLOR_ARGB(255, 255, 255, 255);
 	v[2].Color = D3DCOLOR_ARGB(255, 255, 255, 255);
 	v[3].Color = D3DCOLOR_ARGB(255, 255, 255, 255);
+}
+
+void CField::End()
+{
+	GroundTex = nullptr;
 }
 

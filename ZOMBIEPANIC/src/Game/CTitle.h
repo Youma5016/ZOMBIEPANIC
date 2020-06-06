@@ -16,7 +16,9 @@ public:
 private:
 	std::shared_ptr<LPDIRECT3DTEXTURE9>	mpTexture1, mpTexture2;
 	KdMatrix mMatrix1,mMatrix2;
-	D3DXVECTOR3 mPos;
+	KdVec3 mPos;
+	KdVec3 mPos2;
+
 	int Alpha;
 };
 
